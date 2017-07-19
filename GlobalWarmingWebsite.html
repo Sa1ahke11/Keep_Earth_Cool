@@ -9,34 +9,29 @@ body
 {
   background-color: #429bf4;
 }
-#button-1{
-	font-family: sans-serif;
-	color: white;
-	text-shadow: 4px 4px #808080;
-	background: url("http://bestanimations.com/Nature/Water/wave-ocean-animated-gif-8.gif");
-	background-size: 175%;
-	margin-top: 10%;
-	/*margin-bottom: -1%;*/
-}
-#button-2{
-	font-family: sans-serif;
-	color: black;
-	text-shadow: 4px 4px #808080;
-	background: url("https://media.giphy.com/media/nl3XFL8eMnlUk/giphy.gif")
-
+#section_1
+{
+		padding-bottom: 10%;
+		padding-top: 2%;
+		background: white;
+		width: 70%;
+		margin: auto;
+		display: block;
+		margin-top: 0.5%;
 }
 h1
 {
 	font-family: sans-serif;
 	color: rgb(108, 171, 54);
-    font-size: 350%;
+    font-size: 380%;
     text-align: center;
 		margin-top: 20px;
     margin-bottom: -7%;
 }
-.button{
+.button
+{
 		background-color:black;
-		margin-bottom: 10%;
+		margin-bottom: 20%;
 		/*font-size: 25px;
 		font-family: sans-serif;
 		border: 2px solid #284DF6;*/
@@ -48,20 +43,33 @@ h1
     padding: 5%;
 		font-size: 4vw;
 }
-#section_1{
-		padding-bottom: 10%;
-		padding-top: 2%;
-		background: white;
-		width: 70%;
-		margin: auto;
-		display: block;
-		margin-top: 0.5%;
+#button-1
+{
+	font-family: sans-serif;
+	color: white;
+	text-shadow: 4px 4px #808080;
+	background: url("http://bestanimations.com/Nature/Water/wave-ocean-animated-gif-8.gif");
+	background-size: 150%;
+	margin-top: 13%;
+	margin-bottom: 3%;
+
+	/*margin-bottom: -1%;*/
+}
+#button-2{
+	margin-bottom: 3%;
+	color: black;
+	font-family: sans-serif;
+	text-shadow: 4px 4px #808080;
+	background: url("https://media.giphy.com/media/nl3XFL8eMnlUk/giphy.gif")
+
 }
 #button-3
 {
 	background: url("https://cdn2.scratch.mit.edu/get_image/gallery/1450178_200x130.png?v=1439414076.38");
 	color: white;
 		text-shadow: 4px 4px #808080;
+		margin-bottom: 3%;
+
 }
 #button-4
 {
@@ -69,16 +77,40 @@ h1
 	background-size: 100%;
 	color: black;
 	text-shadow: 4px 4px #808080;
+	margin-bottom: 3%;
+
 }
+	.button span
+	{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after
+{
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span
+{
+  padding-right: 25px;
 }
 </style>
 
 <div id='section_1'>
 	<h1>Global Climate Change</h1>
-	<button id='button-1' class="button">About</button><br>
-	<button id='button-2' class="button" >Causes</button><br>
-	<button id='button-3' class="button" >Effects</button><br>
-	<button id='button-4' class="button" >Myths Debunked</button>
+	<button id='button-1' class="button"><span>About</span></button><br>
+	<button id='button-2' class="button" > <span>Causes</span></button><br>
+	<button id='button-3' class="button" > <span>Effects</span></button><br>
+	<button id='button-4' class="button" > <span>Myths Debunked</span></button>
 </div>
 </body>
 </html>
+
