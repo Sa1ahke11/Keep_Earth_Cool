@@ -21,12 +21,27 @@
 			padding-bottom: 10%;
 		}
 		#section_1{
+
+
 		}
 		#section_2{
 			display: none;
 		}
 		#section_3{
 			display: none;
+		}
+		#good_habits_section{
+			width: 38%;
+			float: left;
+			padding-left: 5%;
+			padding-right: 5%;
+			border-right: 5px dashed rgb(54, 108, 171);
+		}
+		#find_organizations_section{
+			width: 38%;
+			float: left;
+			padding-left: 5%;
+			padding-right: 5%;
 		}
 		h1{
 			font-family: sans-serif;
@@ -35,6 +50,10 @@
 	   	text-align: center;
 			margin-top: 20px;
 		  margin-bottom: -7%;
+		}
+		h2{
+			font-family: sans-serif;
+			color: rgb(54, 108, 171);
 		}
 		.button{
 				background-color:black;
@@ -136,8 +155,8 @@
 		<div id="main-section">
 			<table id='tabs'>
 			  <tr>
-			    <th class='tab2' class='chosen_tab' id='tab2_1'><button id='tab_1' class='tab'>What Is Happening To Our Planet?</button></th>
-			    <th class='tab2' id='tab2_2'><button id='tab_2' class='tab'>How Can I Help?</button></th>
+			    <th class='tab2' class='chosen_tab' id='tab2_1'><button id='tab_1' class='tab'>What is happening to our planet?</button></th>
+			    <th class='tab2' id='tab2_2'><button id='tab_2' class='tab'>How can I help?</button></th>
 			    <th class='tab2' id='tab2_3'><button id='tab_3' class='tab'>News</button></th>
 			  </tr>
 			</table>
@@ -151,7 +170,13 @@
 		  	<button id='button-4' class="button" >Myths Debunked</button>
 		  </div>
 		  <div class='section' id="section_2">
-					<h1>How Can I Help?</h1>
+					<div id='good_habits_section'>
+							<h2>Good Habits to keep:</h2>
+					</div>
+					<div id='find_organizations_section'>
+							<h2>Find Organizations Near You:</h2>
+					</div>
+
 		  </div>
 			<div class='section' id="section_3">
 					<h1>News</h1>
@@ -180,6 +205,7 @@
 								$('#section_2').hide();
 								$('#section_3').show();
 				});
+
 		</script>
 
 </body>
