@@ -4,113 +4,186 @@
 <title>Keep Earth Cool</title>
 </head>
 <body>
-<style>
-body
-{
-  background-color: #429bf4;
-}
-#section_1
-{
-		padding-bottom: 10%;
-		padding-top: 2%;
-		background: white;
-		width: 70%;
-		margin: auto;
-		display: block;
-		margin-top: 0.5%;
-}
-h1
-{
-	font-family: sans-serif;
-	color: rgb(108, 171, 54);
-    font-size: 380%;
-    text-align: center;
-		margin-top: 20px;
-    margin-bottom: -7%;
-}
-.button
-{
-		background-color:black;
-		margin-bottom: 20%;
-		/*font-size: 25px;
-		font-family: sans-serif;
-		border: 2px solid #284DF6;*/
-		margin:auto;
-		/*margin-bottom: 1cm;*/
-		/*padding: 20px 60px;*/
-		display: block;
-		width: 48%;
-    padding: 5%;
-		font-size: 4vw;
-}
-#button-1
-{
-	font-family: sans-serif;
-	color: white;
-	text-shadow: 4px 4px #808080;
-	background: url("http://bestanimations.com/Nature/Water/wave-ocean-animated-gif-8.gif");
-	background-size: 150%;
-	margin-top: 13%;
-	margin-bottom: 3%;
+		<style>
+		body
+		{
+		  background-color: #429bf4;
+		}
+		#main-section{
+			width: 70%;
+			margin: auto;
+			display: block;
+		}
+		.section{
+			padding-top: 2%;
+			background: white;
+			margin-top: -9.5px;
+			padding-bottom: 10%;
+		}
+		#section_1{
 
-	/*margin-bottom: -1%;*/
-}
-#button-2{
-	margin-bottom: 3%;
-	color: black;
-	font-family: sans-serif;
-	text-shadow: 4px 4px #808080;
-	background: url("https://media.giphy.com/media/nl3XFL8eMnlUk/giphy.gif")
 
-}
-#button-3
-{
-	background: url("https://cdn2.scratch.mit.edu/get_image/gallery/1450178_200x130.png?v=1439414076.38");
-	color: white;
-		text-shadow: 4px 4px #808080;
-		margin-bottom: 3%;
+		}
+		#section_2{
+			display: none;
+		}
+		#section_3{
+			display: none;
+		}
+		h1{
+			font-family: sans-serif;
+			color: rgb(108, 171, 54);
+		  font-size: 380%;
+	   	text-align: center;
+			margin-top: 20px;
+		  margin-bottom: -7%;
+		}
+		.button{
+				background-color:black;
+				margin-bottom: 20%;
+				/*font-size: 25px;
+				font-family: sans-serif;
+				border: 2px solid #284DF6;*/
+				margin:auto;
+				/*margin-bottom: 1cm;*/
+				/*padding: 20px 60px;*/
+				display: block;
+				width: 48%;
+		    padding: 5%;
+				font-size: 4vw;
+		}
+		#button-1{
+			font-family: sans-serif;
+			color: white;
+			text-shadow: 4px 4px #808080;
+			background: url("http://bestanimations.com/Nature/Water/wave-ocean-animated-gif-8.gif");
+			background-size: 150%;
+			margin-top: 13%;
+			margin-bottom: 3%;
+			/*margin-bottom: -1%;*/
+		}
+		#button-2{
+			margin-bottom: 3%;
+			color: black;
+			font-family: sans-serif;
+			text-shadow: 4px 4px #808080;
+			background: url("https://media.giphy.com/media/nl3XFL8eMnlUk/giphy.gif")
+		}
+		#button-3{
+			background: url("https://cdn2.scratch.mit.edu/get_image/gallery/1450178_200x130.png?v=1439414076.38");
+			color: white;
+				text-shadow: 4px 4px #808080;
+				margin-bottom: 3%;
+		}
+		#button-4{
+			background: url("https://media.giphy.com/media/hPovBcQ3c1g9W/giphy.gif");
+			background-size: 100%;
+			color: black;
+			text-shadow: 4px 4px #808080;
+			margin-bottom: 3%;
+		}
+		th{
+			background: green;
+			border-radius: 15px;
+			padding-top: 5%;
+			padding-bottom: 5%;
+			cursor: pointer;
+		}
+		#tabs{
+			margin-bottom: 0px;
+		}
+		.tab{
+				width: 150px;
+				background: none;
+				display: inline;
+				color: white;
+				border-radius: 10px;
+				border-color: green;
+		}
+		.chosen_tab{
+				background:	rgb(108, 171, 54);
+		}
+		#tab_1{
+				padding: 1%;
+		}
+		#tab_2{
+				padding: 1.75%;
+		}
+		#tab_3{
+				padding: 1.75%;
+		}
+		button{
+			border: none;
+			cursor: pointer;
+		}
+		.button span{
+		  cursor: pointer;
+		  display: inline-block;
+		  position: relative;
+		  transition: 0.5s;
+		}
+		.button span:after{
+		  content: '\00bb';
+		  position: absolute;
+		  opacity: 0;
+		  top: 0;
+		  right: -20px;
+		  transition: 0.5s;
+		}
+		.button:hover span{
+		  padding-right: 25px;
+		}
+		</style>
 
-}
-#button-4
-{
-	background: url("https://media.giphy.com/media/hPovBcQ3c1g9W/giphy.gif");
-	background-size: 100%;
-	color: black;
-	text-shadow: 4px 4px #808080;
-	margin-bottom: 3%;
+		<div id="main-section">
+			<table id='tabs'>
+			  <tr>
+			    <th class='tab2' class='chosen_tab' id='tab2_1'><button id='tab_1' class='tab'>What is happening to our planet?</button></th>
+			    <th class='tab2' id='tab2_2'><button id='tab_2' class='tab'>How can I help?</button></th>
+			    <th class='tab2' id='tab2_3'><button id='tab_3' class='tab'>News</button></th>
+			  </tr>
+			</table>
 
-}
-	.button span
-	{
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
 
-.button span:after
-{
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
+		  <div class='section' id='section_1'>
+		  	<h1>Global Climate Change</h1>
+		  	<button id='button-1' class="button">About</button><br>
+		  	<button id='button-2' class="button" >Causes</button><br>
+		  	<button id='button-3' class="button" >Effects</button><br>
+		  	<button id='button-4' class="button" >Myths Debunked</button>
+		  </div>
+		  <div class='section' id="section_2">
+					<h1>How can I help</h1>
+		  </div>
+			<div class='section' id="section_3">
+					<h1>News</h1>
+			</div>
+		</div>
 
-.button:hover span
-{
-  padding-right: 25px;
-}
-</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script>
+				$('#tab2_1').addClass('chosen_tab');
+				$('.tab2').click(function(){
+								$('.tab2').removeClass('chosen_tab');
+								$(this).addClass('chosen_tab');
+				});
+				$('#tab2_1').click(function(){
+								$('#section_2').hide();
+								$('#section_3').hide();
+								$('#section_1').show();
+				});
+				$('#tab2_2').click(function(){
+								$('#section_1').hide();
+								$('#section_3').hide();
+								$('#section_2').show();
+				});
+				$('#tab2_3').click(function(){
+								$('#section_1').hide();
+								$('#section_2').hide();
+								$('#section_3').show();
+				});
 
-<div id='section_1'>
-	<h1>Global Climate Change</h1>
-	<button id='button-1' class="button"><span>About</span></button><br>
-	<button id='button-2' class="button" > <span>Causes</span></button><br>
-	<button id='button-3' class="button" > <span>Effects</span></button><br>
-	<button id='button-4' class="button" > <span>Myths Debunked</span></button>
-</div>
+		</script>
+
 </body>
 </html>
-
