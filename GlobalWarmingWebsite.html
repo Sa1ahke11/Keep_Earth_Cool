@@ -8,6 +8,7 @@
 		body
 		{
 		  background-color: #429bf4;
+			font-family: sans-serif;
 		}
 		#main-section{
 			width: 70%;
@@ -19,29 +20,31 @@
 			background: white;
 			margin-top: -9.5px;
 			padding-bottom: 10%;
+
 		}
 		#section_1{
 
 
 		}
 		#section_2{
-			display: none;
+				display: inline-block;
 		}
 		#section_3{
-			display: none;
+
+		}
+		.mini-section{
+			width: 38%;
+			display: inline;
+			padding-left: 5%;
+			padding-right: 5%;
+			float:left;
 		}
 		#good_habits_section{
-			width: 38%;
-			float: left;
-			padding-left: 5%;
-			padding-right: 5%;
 			border-right: 5px dashed rgb(54, 108, 171);
+			padding-bottom: 2%;
 		}
 		#find_organizations_section{
-			width: 38%;
-			float: left;
-			padding-left: 5%;
-			padding-right: 5%;
+
 		}
 		h1{
 			font-family: sans-serif;
@@ -121,7 +124,7 @@
 			background: url("https://media.giphy.com/media/hPovBcQ3c1g9W/giphy.gif");
 			background-size: 100%;
 		}
-		th{
+		.tab2{
 			background: green;
 			border-radius: 15px;
 			padding-top: 5%;
@@ -192,14 +195,59 @@
 		  	<button id='button-4' class="button" >Myths Debunked</button>
 		  </div>
 		  <div class='section' id="section_2">
-					<div id='good_habits_section'>
+
+					<div id='good_habits_section' class='mini-section'>
 							<h2>Good Habits to keep:</h2>
+							<ul>
+								<li>Use compact fluorescent light bulbs (instead of regular incandescent bulbs)</li>
+								<li>Install a programmable thermostat</li>
+								<li>Move the thermostat temperature 2 degrees down (in the Winter) and 2 degrees up (in the summer)</li>
+								<li>Clean/replace filters in your furnace and AC unit</li>
+								<li>Don&#8217;t use <q>standby</q> on appliances: turn on/off</li>
+								<li>Locate fridge and freezer away from cooker/boiler</li>
+								<li>Don&#8217;t air out the house for long periods of time: keep windows open for a few minutes, so air doesn’t escape</li>
+								<li>Cover pots when cooking (or use pressure cookers and steamers)</li>
+								<li>Use washing machine or dishwasher when full and with lower heat</li>
+								<li>Take showers instead of baths</li>
+								<li>Use less hot water</li>
+								<li>Use clothesline instead of dryer (when possible)</li>
+								<li>Recycle!</li>
+								<li>Recycle organic waste (compost)</li>
+								<li>Reuse shopping bag</li>
+								<li>Use reusable lunch boxes (instead of paper bags)</li>
+								<li>Plant trees!</li>
+								<li>Use wind/solar energy</li>
+								<li>Buy locally grown and produced foods</li>
+								<li>Buy fresh food instead of frozen</li>
+								<li>Buy organic food</li>
+								<li>Eat less meat</li>
+								<li>Carpool!</li>
+							</ul>
+
+							<!--
+								CFLs use 60% less energy
+								Save 300 lbs of carbon dioxide per year
+								Almost half of home energy → heating and cooling
+								Can save 2,000 lbs of carbon dioxide per year
+								Save 350 lbs
+								By recycling HALF of waste… save 2,400 lbs
+								1 tree can absorb 1 ton of carbon dioxide in its life
+								Shade can save you 10-15% on AC bill
+								Average meal travels 1,200 miles to you
+								Frozen uses 10x more energy
+								If all corn + soybean were grown organically, we could remove 580 billion lbs
+								Cows emit methane (with every breath), a top methane emitter
+								Carpooling 2 days a week saves 1,590 lbs
+								-->
+
 					</div>
-					<div id='find_organizations_section'>
+					<div id='find_organizations_section' class='mini-section'>
 							<h2>Find Organizations Near You:</h2>
+							- insert feature here -
 					</div>
 
 		  </div>
+
 			<div class='section' id="section_3">
 					<h1>News</h1>
 			</div>
@@ -207,6 +255,8 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script>
+				$('#section_2').hide();
+				$('#section_3').hide();
 				$('#tab2_1').addClass('chosen_tab');
 				$('.tab2').click(function(){
 								$('.tab2').removeClass('chosen_tab');
